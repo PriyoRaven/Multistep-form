@@ -1,0 +1,186 @@
+/* taken from google font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* universal */
+*,html {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    caret-color: transparent;
+    overflow-y: hidden;
+}
+
+
+/* navbar */
+.navbar {
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.max-width {
+    padding: 10px;
+}
+
+.heading {
+    margin: 10px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+
+/* others */
+.form-container {
+    display: flex;
+    z-index: 1;
+    height: 2000px;
+}
+.topics {
+    flex: 0.7;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+
+}
+
+.secondTopic {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 30px;
+    font-weight: 500;
+}
+.topics h1 {
+    margin-bottom: 10px;
+    margin-left: 1px;
+    padding: 10px 0;
+    padding-left: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+.topics h1 a {
+    color: black;
+}
+.line {
+    border-top: 1px solid rgb(206, 206, 206);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.topics .active-topic {
+    font-weight: 400;
+    background-color: white;
+    width: 100%;
+    border-left: solid 3px rgb(60, 154, 255);
+}
+.form {
+    flex: 2;
+    padding: 20px;
+}
+.form-step {
+    display: none;
+}
+.question {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.question-2 {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.choice {
+    margin-top: -15px;
+}
+.radio-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+.radio-round:checked {
+    background-color: rgb(62, 117, 255);
+}
+.hint {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: rgb(165, 165, 165);
+    padding-left: 30px;
+    margin-top: -15px;
+}
+.form-step.active {
+    display: block;
+}
+.message {
+    position: fixed;
+    margin-top: 2000px;
+}
+.tick {
+    margin: 5px;
+}
+.check{
+    font-style: italic;
+    color: rgb(169, 169, 169);
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.done {
+    font-size: 40px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.form-step h2 {
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+}
+
+/* nextbutton */
+.next-step {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+    border-color: transparent;
+    border-radius: 3px;
+    padding: 5px 25px;
+    background-color: rgb(62, 117, 255);
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* backbutton */
+.prev-step {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(62, 117, 255);
+    border-color: transparent;
+    border-radius: 3px;
+    padding: 5px 25px;
+    background-color: white;
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+    text-transform: uppercase;
+}

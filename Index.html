@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with Topics</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="max-width">
+            <a class="heading" href="./index.html">
+                <img class="logo" src="/assets/logo.jpg" alt="reload">
+            </a>
+        </div>
+    </nav>
+
+    <!-- for the form -->
+    <div class="form-container">
+        <div class="topics">
+            <h1 class="topic" data-step="0">1. Privacy Policy Uses</h1>
+            <h1 class="topic" data-step="1">2. User Information</h1>
+            <h1 class="topic" data-step="2">3. Collection of Information</h1>
+            <h1 class="topic" data-step="3">4. Use of Information</h1>
+            <h1 class="topic" data-step="4">5. Final page</h1>
+        </div>
+        <div class="form">
+            <form id="multi-step-form">
+                <div class="form-step active" data-step="0" id="step-0">
+                    <h2>Privacy Policy</h2>
+                    <hr class="line">
+                    <div class="secondTopic">Privacy Policy Uses</div>
+                    <div class="question">What will this privacy Policy be used for?</div><br>
+                    <input class="tick" type="checkbox" name="website" value="website" tabindex="1" />Website<br/>
+                    <input class="tick" type="checkbox" name="Mobile Application" value="Mobile Application" tabindex="2" />Mobile Application<br/>
+                    <input class="tick" type="checkbox" name="Facebook Application" value="Facebook Application" tabindex="3" />Facebook Application<br/>
+                    <hr class="line">
+                    <button class="next-step" onclick="nextStep()">Next</button>
+                </div>
+
+                <div class="form-step" data-step="1" id="step-1">
+                    <h2>Privacy Policy</h2>
+                    <hr class="line">
+                    <div class="secondTopic">User Location</div>
+                    <div class="question">Do you have users in the United States?</div><br>
+                    <div class="hint">Select "Yes" if you want to be CCPA compliant.</div><br>
+                    <div class="choice">
+                        <input type="radio" name="user1" class="radio-round" tabindex="1" value="Yes" id="yes1"/> 
+                        <label for="us-yes">Yes</label><br/>
+                        <input type="radio" name="user1" class="radio-round" tabindex="2" value="No" id="no1"/>
+                        <label for="us-no">No</label><br/>
+                    </div>
+                    <div class="question-2">Do you have users in the EU, UK, Switzerland, Iceland, Liechtenstein, or Norway?</div><br>
+                    <div class="choice">
+                        <input type="radio" name="user2" class="radio-round" tabindex="1" value="Yes" id="yes2"/> 
+                        <label for="eu-yes">Yes</label><br/>
+                        <input type="radio" name="user2" class="radio-round" tabindex="2" value="No" id="no2"/>
+                        <label for="eu-no">No</label><br/>
+                    </div>
+                    <div class="question-2">Do you have users in Canada?</div><br>
+                    <div class="choice">
+                        <input type="radio" name="user2" class="radio-round" tabindex="1" value="Yes" id="yes2"/> 
+                        <label for="eu-yes">Yes</label><br/>
+                        <input type="radio" name="user2" class="radio-round" tabindex="2" value="No" id="no2"/>
+                        <label for="eu-no">No</label><br/>
+                    </div>
+                    <hr class="line">
+                    <button class="prev-step" onclick="prevStep()">Back</button>
+                    <button class="next-step" onclick="nextStep()">Next</button>
+                </div>
+                
+
+                <div class="form-step" data-step="2" id="step-2">
+                    <h2>Privacy Policy</h2>
+                    <hr class="line">
+                    <div class="secondTopic">Personal Information from Other Sources</div>
+                    <div class="question-2">Are you collecting personal information about your users from other sources?</div><br>
+                    <div class="choice">
+                        <input type="radio" name="user2" class="radio-round" tabindex="1" value="Yes" id="yes2"/> 
+                        <label for="eu-yes">Yes</label><br/>
+                        <input type="radio" name="user2" class="radio-round" tabindex="2" value="No" id="no2"/>
+                        <label for="eu-no">No</label><br/>
+                    </div>
+                    <hr class="line">
+                    <button class="prev-step" onclick="prevStep()">Back</button>
+                    <button class="next-step" onclick="nextStep()">Next</button>
+                </div>
+
+                <div class="form-step" data-step="3">
+                    <h2>Privacy Policy</h2>
+                    <hr class="line">
+                    <div class="check">You can go back and check your details. When you are ready click on submit.</div>
+                    <hr class="line">
+                    <button class="prev-step" onclick="prevStep()">Back</button>
+                    <button class="next-step" onclick="nextStep()">Submit</button>
+                </div>
+
+                <div class="form-step" data-step="4">
+                    <h2>Congratulation</h2>
+                    <hr class="line">
+                    <div class="done">✅The information you provided has been submitted.</div>
+                    <textarea class="message" name="message" required></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
